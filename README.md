@@ -58,3 +58,7 @@ The app never talks to the AI provider directly from the browser. In development
 ## Deploying to Vercel
 
 The project is configured for Vercel out of the box. Set `AI_API_KEY`, `AI_BASE_URL`, and `AI_MODEL` as Environment Variables in the Vercel project settings, then deploy. `vercel.json` rewrites non-`/api` routes to `index.html` for client-side routing, and the `api/` directory is deployed as a serverless function.
+
+## License
+
+Licensed under the Apache License 2.0. See the [`LICENSE`](LICENSE) file for the full text.
