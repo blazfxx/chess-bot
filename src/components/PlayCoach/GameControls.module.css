@@ -1,0 +1,97 @@
+.controls {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  width: 100%;
+  max-width: 560px;
+}
+
+.selectors {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1.25rem;
+}
+
+.group {
+  display: flex;
+  flex-direction: column;
+  gap: 0.4rem;
+}
+
+.groupLabel {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.72rem;
+  letter-spacing: 0.04em;
+  text-transform: uppercase;
+  color: #7a6f62;
+}
+
+.segmented {
+  display: flex;
+}
+
+.seg,
+.segActive {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.8rem;
+  font-weight: 500;
+  background: transparent;
+  border: 1px solid #3d3530;
+  border-right-width: 0;
+  padding: 0.4rem 0.85rem;
+  cursor: pointer;
+  transition: color 0.2s ease, background 0.2s ease, border-color 0.2s ease;
+}
+
+.seg {
+  color: #9a8e7e;
+}
+
+.seg:first-child,
+.segActive:first-child {
+  border-radius: 4px 0 0 4px;
+}
+
+.seg:last-child,
+.segActive:last-child {
+  border-radius: 0 4px 4px 0;
+  border-right-width: 1px;
+}
+
+.seg:hover {
+  color: #d4c8b8;
+}
+
+.segActive {
+  color: #1a1714;
+  background: #c8a96e;
+  border-color: #c8a96e;
+}
+
+.buttons {
+  display: flex;
+  gap: 0.75rem;
+}
+
+.button {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-weight: 500;
+  color: #9a8e7e;
+  background: transparent;
+  border: 1px solid #3d3530;
+  border-radius: 4px;
+  padding: 0.5rem 1.25rem;
+  cursor: pointer;
+  transition: border-color 0.2s ease, color 0.2s ease;
+}
+
+.button:hover:not(:disabled) {
+  border-color: #6b5f52;
+  color: #d4c8b8;
+}
+
+.button:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}

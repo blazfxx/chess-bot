@@ -1,0 +1,92 @@
+.wrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  padding: 3rem 1.5rem 2rem;
+}
+
+.tabBar {
+  display: flex;
+  gap: 1.5rem;
+  border-bottom: 1px solid #3d3530;
+  margin-bottom: 2rem;
+}
+
+.tab,
+.tabActive {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  background: none;
+  border: none;
+  border-bottom: 2px solid transparent;
+  padding: 0.6rem 0.25rem;
+  margin-bottom: -1px;
+  cursor: pointer;
+  transition: color 0.2s ease;
+}
+
+.tab {
+  color: #7a6f62;
+}
+
+.tab:hover {
+  color: #9a8e7e;
+}
+
+.tabActive {
+  color: #d4c8b8;
+  border-bottom-color: #c8a96e;
+}
+
+.header {
+  margin-bottom: 2rem;
+}
+
+.heading {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 2rem;
+  font-weight: 600;
+  color: #d4c8b8;
+  margin: 0 0 0.5rem;
+  line-height: 1.2;
+}
+
+.subheading {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.9rem;
+  color: #7a6f62;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.sections {
+  display: flex;
+  flex-direction: column;
+  gap: 1.25rem;
+}
+
+.footer {
+  margin-top: 3rem;
+  text-align: center;
+}
+
+.resetButton {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1714;
+  background: #c8a96e;
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem 1.75rem;
+  cursor: pointer;
+  transition: background 0.2s ease;
+}
+
+.resetButton:hover {
+  background: #d4b87e;
+}
+
+.resetButton:active {
+  background: #b89858;
+}

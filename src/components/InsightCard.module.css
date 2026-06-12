@@ -1,0 +1,49 @@
+.card {
+  background: #2a2520;
+  border: 1px solid #3d3530;
+  border-left: 3px solid #c8a96e;
+  border-radius: 12px;
+  padding: 1.5rem;
+  margin: 0;
+}
+
+.title {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.25rem;
+  font-weight: 600;
+  color: #d4c8b8;
+  margin: 0 0 0.75rem;
+  line-height: 1.3;
+}
+
+.body {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.95rem;
+  font-weight: 400;
+  line-height: 1.7;
+  color: #9a8e7e;
+  margin: 0;
+}
+
+.positive {
+  border-left-color: #6b8f5e;
+}
+
+.negative {
+  border-left-color: #b85c3c;
+}
+
+.verdict {
+  border-left-color: #c8a96e;
+  padding: 1.75rem 1.5rem;
+}
+
+.verdict .title {
+  font-size: 1.35rem;
+  color: #c8a96e;
+}
+
+.verdict .body {
+  font-size: 1rem;
+  color: #d4c8b8;
+}

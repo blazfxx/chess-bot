@@ -1,0 +1,136 @@
+.panel {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  min-width: 0;
+}
+
+.askButton,
+.askButtonPulse {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #1a1714;
+  background: #c8a96e;
+  border: none;
+  border-radius: 4px;
+  padding: 0.7rem 1.5rem;
+  cursor: pointer;
+  transition: background 0.2s ease, opacity 0.2s ease;
+}
+
+.askButton:hover,
+.askButtonPulse:hover {
+  background: #d4b87e;
+}
+
+.askButton:disabled,
+.askButtonPulse:disabled {
+  opacity: 0.4;
+  cursor: not-allowed;
+}
+
+.askButtonPulse {
+  animation: blunderPulse 1.6s ease-in-out infinite;
+}
+
+@keyframes blunderPulse {
+  0%, 100% {
+    box-shadow: 0 0 0 0 rgba(184, 92, 60, 0);
+  }
+  50% {
+    box-shadow: 0 0 0 5px rgba(184, 92, 60, 0.35);
+  }
+}
+
+.nudge {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.8rem;
+  color: #b85c3c;
+  margin: 0;
+}
+
+.feed {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+  max-height: 480px;
+  overflow-y: auto;
+  scrollbar-width: thin;
+  scrollbar-color: #3d3530 transparent;
+}
+
+.feed::-webkit-scrollbar {
+  width: 8px;
+}
+
+.feed::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.feed::-webkit-scrollbar-thumb {
+  background: #3d3530;
+  border-radius: 4px;
+}
+
+.feed::-webkit-scrollbar-thumb:hover {
+  background: #7a6f62;
+}
+
+.empty {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #7a6f62;
+  margin: 0.5rem 0;
+  line-height: 1.6;
+}
+
+.thinking {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.85rem;
+  font-style: italic;
+  color: #9a8e7e;
+  margin: 0;
+}
+
+.entry {
+  background: #2a2520;
+  border: 1px solid #3d3530;
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.entryDebrief {
+  background: #2a2520;
+  border: 1px solid rgba(200, 169, 110, 0.5);
+  border-radius: 8px;
+  padding: 1rem;
+}
+
+.entryLabel {
+  display: block;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.75rem;
+  color: #9a8e7e;
+  margin-bottom: 0.4rem;
+}
+
+.entryLabelDebrief {
+  display: block;
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.75rem;
+  font-weight: 600;
+  letter-spacing: 0.03em;
+  text-transform: uppercase;
+  color: #c8a96e;
+  margin-bottom: 0.4rem;
+}
+
+.entryText {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.9rem;
+  line-height: 1.6;
+  color: #d4c8b8;
+  margin: 0;
+}

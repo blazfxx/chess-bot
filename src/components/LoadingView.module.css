@@ -1,0 +1,67 @@
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 3rem 1.5rem 2rem;
+  max-width: 440px;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.username {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 0.85rem;
+  color: #5a5048;
+  margin: 0 0 1.5rem;
+}
+
+.progressRow {
+  display: flex;
+  align-items: center;
+  gap: 0.75rem;
+}
+
+.dot {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  background: #c8a96e;
+  animation: pulse 2s ease-in-out infinite;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    opacity: 0.3;
+    transform: scale(0.85);
+  }
+  50% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.progressText {
+  font-family: 'EB Garamond', Georgia, serif;
+  font-size: 1.1rem;
+  color: #b0a494;
+  margin: 0;
+  line-height: 1.5;
+}
+
+.steps {
+  display: flex;
+  gap: 0.5rem;
+  margin-top: 1.25rem;
+}
+
+.stepDot {
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background: #3d3530;
+  transition: background 0.3s ease;
+}
+
+.stepDotFilled {
+  background: #c8a96e;
+}

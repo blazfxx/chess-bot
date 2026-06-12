@@ -1,0 +1,47 @@
+.list {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.3rem 0.75rem;
+  width: 100%;
+  max-height: 96px;
+  overflow-y: auto;
+  background: #2a2520;
+  border: 1px solid #3d3530;
+  border-radius: 6px;
+  padding: 0.6rem 0.8rem;
+  scrollbar-width: thin;
+  scrollbar-color: #3d3530 transparent;
+}
+
+.list::-webkit-scrollbar {
+  width: 8px;
+}
+
+.list::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+.list::-webkit-scrollbar-thumb {
+  background: #3d3530;
+  border-radius: 4px;
+}
+
+.list::-webkit-scrollbar-thumb:hover {
+  background: #7a6f62;
+}
+
+.pair {
+  font-family: 'SF Mono', 'Menlo', monospace;
+  font-size: 0.78rem;
+  color: #9a8e7e;
+  white-space: nowrap;
+}
+
+.empty {
+  font-family: 'Inter', -apple-system, sans-serif;
+  font-size: 0.78rem;
+  font-style: italic;
+  color: #7a6f62;
+  margin: 0;
+  padding: 0.6rem 0.8rem;
+}
