@@ -47,8 +47,12 @@ export default async function handler(req, res) {
       payload.model = model
     }
 
+    // Stop slightly before the function's 60s limit so the client gets a clear error instead of a bare 504.
+    const controller = new AbortController()
+    const timer = setTimeout(() => controller.abort(), 55000)
     const upstream = await fetch(`${baseUrl}/chat/completions`, {
       method: 'POST',
+      signal: controller.signal,
       headers: {
         'Content-Type': 'application/json',
         Authorization: `Bearer ${apiKey}`,
@@ -57,10 +61,15 @@ export default async function handler(req, res) {
     })
 
     const text = await upstream.text()
+    clearTimeout(timer)
     res.status(upstream.status)
     res.setHeader('Content-Type', upstream.headers.get('content-type') || 'application/json')
     res.send(text)
   } catch (err) {
+    if (err.name === 'AbortError') {
+      res.status(504).json({ error: { message: 'The AI provider took too long to answer. Please try again.' } })
+      return
+    }
     res.status(502).json({ error: { message: `Proxy error: ${err.message}` } })
   }
 }

@@ -1,5 +1,8 @@
 {
   "framework": "vite",
+  "functions": {
+    "api/ai/chat/completions.js": { "maxDuration": 60 }
+  },
   "rewrites": [
     {
       "source": "/((?!api/).*)",
