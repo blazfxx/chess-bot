@@ -15,8 +15,8 @@ Create a `.env` file in the project root with your AI provider details:
 
 ```
 AI_API_KEY=your-api-key
-AI_BASE_URL=https://your-openai-compatible-endpoint/v1
-AI_MODEL=z-ai/glm-5.3
+AI_BASE_URL=https://integrate.api.nvidia.com/v1
+AI_MODEL=minimaxai/minimax-m3.1-flash
 ```
 
 ## Run it
