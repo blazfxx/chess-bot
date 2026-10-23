@@ -16,7 +16,7 @@ Create a `.env` file in the project root with your AI provider details:
 ```
 AI_API_KEY=your-api-key
 AI_BASE_URL=https://your-openai-compatible-endpoint/v1
-AI_MODEL=glm-5.1
+AI_MODEL=z-ai/glm-5.3
 ```
 
 ## Run it
